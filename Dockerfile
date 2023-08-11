@@ -27,6 +27,9 @@ RUN tar -zxf jdk-11.0.19_linux-x64_bin.tar.gz
 RUN mv -f apache-tomcat-9.0.78/* /opt/download/extract/tomcat
 RUN mv -f apache-maven-3.9.4/* /opt/download/extract/maven
 RUN mv -f jdk-11.0.19/* /opt/download/extract/java
+RUN rm -rf jdk-11.0.19_linux-x64_bin.tar.gz jdk-11.0.19
+RUN rm -rf apache-maven-3.9.4-bin.tar.gz apache-maven-3.9.4
+RUN rm -rf apache-tomcat-9.0.78.tar.gz apache-tomcat-9.0.78
 WORKDIR /
 
 # Configure the Envierment of java and maven 
