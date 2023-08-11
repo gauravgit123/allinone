@@ -42,4 +42,6 @@ RUN mkdir /Script
 WORKDIR /Script
 COPY create_mvn_folder.sh .
 ADD git_add.sh .
+RUN chmod 755 create_mvn_folder.sh
+RUN chmod 755 git_add.sh
 WORKDIR /
